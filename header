@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# print out the first line of a file with column numbers
+# if a second argument is provided, print that line instead of the first line
+# examples:
+#
+# header myfile
+# header myfile 2
+# grep TP53 myfile | header
+
+
+if [ -z "$2" ];then
+    head -n 1 $1 | perl -pe 's/\t/\n/g' | cat -n
+else
+    head -n $2 $1 | tail -n 1 | perl -pe 's/\t/\n/g' | cat -n
+fi
