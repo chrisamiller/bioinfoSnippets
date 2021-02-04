@@ -141,7 +141,7 @@ echo '        -J ${job_name} \' >>$outfile
 echo '        -cwd ${cwd} \' >>$outfile
 echo '        -o /dev/null \' >>$outfile
 echo '        -e '$logdir'/cromwell-%J.err \' >>$outfile
-echo '        -q $compute_queue \' >>$outfile
+echo '        -q '$compute_queue' \' >>$outfile
 echo '        -G '$compute_group' \' >>$outfile
 if [[ ! -z "$lsf_job_group" ]];then
     echo '        -g '$lsf_job_group' \' >>$outfile
