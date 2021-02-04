@@ -164,8 +164,9 @@ echo '            caching {' >>$outfile
 echo '              duplication-strategy: [' >>$outfile
 echo '                "hard-link", "soft-link", "copy"' >>$outfile
 echo '              ]' >>$outfile
-echo '              hashing-strategy: "md5"' >>$outfile
-echo '              check-sibling-md5: false' >>$outfile
+
+echo '              hashing-strategy: "xxh64"' >>$outfile
+echo '              fingerprint-size: 10485760' >>$outfile
 echo '            }' >>$outfile
 echo '          }' >>$outfile
 echo '        }' >>$outfile
