@@ -195,3 +195,7 @@ echo '    connectionTimeout = 120000' >>$outfile
 echo '    numThreads = 1' >>$outfile
 echo '   }' >>$outfile
 echo '}' >>$outfile
+echo 'call-caching {'
+echo '  enabled = true'
+echo '  invalidate-bad-cache-results = true'
+echo '}'
